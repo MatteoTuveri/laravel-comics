@@ -26,6 +26,20 @@
             <div class="text-center text-white bg-dc px-5 py-2 fw-bold">LOAD MORE</div>
         </div>
     </div>
+    <div class="bg-dc">
+        <div class="container d-flex flex-wrap justify-content-center py-5">
+            @foreach ($store['options_shop'] as $item)
+            <div class="d-flex align-items-center px-3 ">
+                <div>
+                    <img src="{{ Vite::asset($item['img']) }}" alt="{{$item['title']}}" class="opt">
+                </div>
+                <div class=" text-start text-uppercase text-white ms-1">
+                    {{$item['title']}}
+                </div>
+            </div>  
+            @endforeach
+        </div>
+    </div>
 
 </main>
 @endsection
