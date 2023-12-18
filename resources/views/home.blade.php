@@ -1,7 +1,4 @@
 @extends('layouts.app')
-
-@section('title','Home')
-
 @section('content')
 <main>
     <div id="jumbo" class="w-100">
@@ -33,13 +30,12 @@
                 <div>
                     <img src="{{ Vite::asset($item['img']) }}" alt="{{$item['title']}}" class="opt">
                 </div>
-                <div class=" text-start text-uppercase text-white ms-1">
+                <div class=" text-start text-uppercase text-white ms-2">
                     {{$item['title']}}
                 </div>
             </div>  
             @endforeach
         </div>
     </div>
-
 </main>
 @endsection

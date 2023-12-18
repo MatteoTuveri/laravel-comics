@@ -47,23 +47,23 @@ return [
             'socials'=>[
                 [
                     'title'=> 'facebook',
-                    'img' => 'footer-facebook.png'
+                    'img' => 'resources/img/footer-facebook.png'
                 ],
                 [
                     'title'=> 'twitter',
-                    'img' => 'footer-twitter.png'
+                    'img' => 'resources/img/footer-twitter.png'
                 ],
                 [
                     'title'=> 'youtube',
-                    'img' => 'footer-youtube.png'
+                    'img' => 'resources/img/footer-youtube.png'
                 ],
                 [
                     'title'=> 'pinterest',
-                    'img' => 'footer-pinterest.png'
+                    'img' => 'resources/img/footer-pinterest.png'
                 ],
                 [
                     'title'=> 'periscope',
-                    'img' => 'footer-periscope.png'
+                    'img' => 'resources/img/footer-periscope.png'
                 ],
 
             ]
