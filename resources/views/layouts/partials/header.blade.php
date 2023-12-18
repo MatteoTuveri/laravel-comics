@@ -23,7 +23,7 @@
                 @endforeach
             </ul>
             <form class="d-flex border-bottom border-primary" role="search">
-                <input class="form-control border-0 text-end p-0" type="search" placeholder="Search" aria-label="Search">
+                <input class="form-control border-0 shadow-none text-end p-0" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn p-0" type="submit"> <i class="fa-solid fa-magnifying-glass"></i> </button>
             </form>
         </div>
