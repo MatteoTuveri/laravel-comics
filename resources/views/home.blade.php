@@ -4,7 +4,9 @@
 
 @section('content')
 <main>
-    <section class="container">
+    <div id="jumbo" class="w-100">
+    </div>
+    <div class="container">
         <div class="row">
             @foreach ($comics as $comic)
                 <div class="col-12 col-md-4 col-lg-3">
@@ -14,6 +16,6 @@
                 </div>
             @endforeach
         </div>
-    </section>
+    </div>
 </main>
 @endsection

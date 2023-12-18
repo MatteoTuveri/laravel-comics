@@ -6,9 +6,9 @@
         <div class="d-flex">
             <ul class="d-flex align-items-center list-unstyled m-0">
                 @foreach ($store['nav'] as $item)
-                    <li class="mb-0 mx-3 @if ($item === $store['nav'][count($store['nav'])-1]){{'d-none'}}@endif ">{{ $item }}</li>
+                    <li class="mb-0 mx-3 text-uppercase @if ($item === $store['nav'][count($store['nav'])-1]){{'d-none'}}@endif ">{{ $item }}</li>
                     @if ($item === $store['nav'][count($store['nav'])-1])
-                        <li class="nav-item dropdown mb-0 mx-3">
+                        <li class="nav-item dropdown mb-0 mx-3 text-uppercase">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             {{ $item }}
                             </a>
@@ -21,11 +21,10 @@
                         </li>
                     @endif 
                 @endforeach
-
             </ul>
-            <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
+            <form class="d-flex border-bottom border-primary" role="search">
+                <input class="form-control border-0 text-end p-0" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn p-0" type="submit"> <i class="fa-solid fa-magnifying-glass"></i> </button>
             </form>
         </div>
     </div>
