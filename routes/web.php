@@ -15,5 +15,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $comics = config('comics_db.comics');
-    return view('home', compact('comics'));
+    $store = config('store.data');
+    $data =[
+        'comics'=> $comics,
+        'store'=> $store
+    ];
+    return view('home', $data);
 });
