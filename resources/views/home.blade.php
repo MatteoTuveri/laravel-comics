@@ -9,14 +9,16 @@
                 CURRENT SERIES
             </div>
             <div class="row py-5">
-                @foreach ($comics as $comic)
-                    <div class="col-12 col-md-4 col-xl-2 my-4 d-flex flex-column align-items-center">
-                        <div class="img-card overflow-hidden">
-                            <img src="{{  $comic['thumb']  }}" class="w-100" alt="{{$comic['title']}}">
-                        </div>
-                        <div class="text-white text-center py-2">
-                            {{ $comic['title'] }}
-                        </div>
+                @foreach ($comics as $key =>$comic)
+                    <div class="col-12 col-md-4 col-xl-2 my-4 ">
+                        <a href="{{ route('pages.details', $key) }}" class="d-flex flex-column align-items-center">
+                            <div class="img-card overflow-hidden">
+                                <img src="{{  $comic['thumb']  }}" class="w-100" alt="{{$comic['title']}}">
+                            </div>
+                            <div class="text-white text-center py-2">
+                                {{ $comic['title'] }}
+                            </div>
+                        </a>
                     </div>
                 @endforeach
             </div>

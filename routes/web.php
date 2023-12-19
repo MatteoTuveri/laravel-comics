@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
     $comics = config('comics_db.comics');
     $store = config('store.data');
@@ -21,4 +22,19 @@ Route::get('/', function () {
         'store'=> $store
     ];
     return view('home', $data);
-});
+})->name('home');
+
+Route::get('/details/{id}', function ($id) {
+    $comics = config('comics_db.comics');
+    $store = config('store.data');
+    if ($id >= 0 && $id < count($comics)) {
+        $comic = $comics[$id];
+        $data =[
+            'comic'=> $comic,
+            'store'=> $store
+        ];
+        return view('pages.details',$data);
+    } else {
+        abort(404);
+    }
+})->name('pages.details');
